@@ -5,7 +5,7 @@ Wazuh Ruleset for OpenStack Nova
 
 Repositori ini berisi seperangkat decoder dan rules Wazuh yang dirancang khusus untuk memantau log dari layanan OpenStack Nova (nova-api, nova-compute, nova-scheduler). Ruleset ini bertujuan untuk meningkatkan visibilitas keamanan dan operasional pada infrastruktur OpenStack Anda dengan mengubah log mentah menjadi alert yang relevan dan dapat ditindaklanjuti.
 
-1.Fitur Utama
+A. Fitur Utama
 
     Deteksi Keamanan Kritis: Mendeteksi secara spesifik event penting seperti kegagalan autentikasi (401 Unauthorized).
 
