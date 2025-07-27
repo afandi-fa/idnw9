@@ -25,30 +25,26 @@ Untuk menggunakan ruleset ini, ikuti langkah-langkah berikut pada Wazuh Manager 
 Salin konten dari file local_decoder.xml yang disediakan ke dalam file /var/ossec/etc/decoders/local_decoder.xml di Wazuh Manager. Jika file tersebut sudah ada, tambahkan konten ke dalamnya.
 Bash
 
-# Buka atau buat file decoder lokal
+Buka atau buat file decoder lokal
 nano /var/ossec/etc/decoders/local_decoder.xml
+Salin dan tempel konten decoder dari repositori ini ke dalam file tersebut
 
-# Salin dan tempel konten decoder dari repositori ini ke dalam file tersebut
 
 2. Salin File Rules
-
 Salin konten dari file local_rules.xml yang disediakan ke dalam file /var/ossec/etc/rules/local_rules.xml di Wazuh Manager. Jika file tersebut sudah ada, tambahkan konten ke dalamnya.
 Bash
-
-# Buka atau buat file rules lokal
+Buka atau buat file rules lokal
 nano /var/ossec/etc/rules/local_rules.xml
+Salin dan tempel konten rules dari repositori ini ke dalam file tersebut
 
-# Salin dan tempel konten rules dari repositori ini ke dalam file tersebut
 
 3. Restart Wazuh Manager
-
 Setelah menyimpan kedua file tersebut, restart layanan Wazuh Manager untuk menerapkan perubahan.
 Bash
-
 systemctl restart wazuh-manager
 
-Konfigurasi Pengumpulan Log
 
+Konfigurasi Pengumpulan Log
 Pastikan Wazuh Agent yang terpasang pada node OpenStack Anda dikonfigurasi untuk mengirim log Nova ke Manager. Tambahkan blok <localfile> berikut ke dalam file ossec.conf di agent Anda (biasanya di /var/ossec/etc/ossec.conf).
 XML
 
@@ -61,13 +57,12 @@ XML
 
 Setelah menambahkan konfigurasi, restart Wazuh Agent.
 Bash
-
 systemctl restart wazuh-agent
 
-🔬 Pengujian dan Validasi dengan wazuh-logtest
+
+Pengujian dan Validasi dengan wazuh-logtest
 
 Anda dapat memvalidasi bahwa decoder dan rules bekerja dengan benar menggunakan utilitas wazuh-logtest pada Wazuh Manager.
-
 Langkah-langkah Pengujian:
 
     Jalankan wazuh-logtest sebagai root.
@@ -122,4 +117,3 @@ Output yang Diharapkan:
 
 Kontribusi
 
-Merasa ada yang bisa ditingkatkan? Silakan buat pull request atau buka issue. Kontribusi dalam bentuk decoder atau rules untuk layanan OpenStack lainnya sangat diterima.
